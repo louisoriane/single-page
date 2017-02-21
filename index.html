@@ -3,8 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Single Page</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="assets/script.js"></script>
 	</head>
 	<body>
+		<!-- PAGE LOGIN -->
+		<form>
+			<input type="text" name="pseudo" placeholder="Pseudo">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit">
+		</form>
 		
+		<!-- PAGE PROFIL -->
+		<div id="page-profil">
+			<nav>
+				<ul id="menu">
+					<li id="home"><a href="#">Accueil</a></li>
+					<li id="user-profil"></li>
+					<li id="log-off"><a href="#">Deconnexion</a></li>
+				</ul>
+			</nav>
+		</div>
+
 	</body>
 </html>
