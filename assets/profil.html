@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	PROFIL
-</body>
-</html>
+<div id="all">
+	<h3 id="user-name"></h3>
+	<p>
+		Vous êtes Administrateur<br><br>
+		<u>Stockage</u><br><br>
+		1% documents<br>
+		4% photos<br>
+		10% musiques<br>
+		1% video
+	</p>
+
+	<script>
+		$(function() {
+			$('#user-name').append(localStorage.getItem('User'));
+		});
+	</script>
+</div>

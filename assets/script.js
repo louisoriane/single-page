@@ -25,13 +25,13 @@ function userExist() {
 
 // Show or Hide content depending of user's session
 function showContent() {
-	$('form').hide();
+	$('#log-in').hide();
 	$('#page-profil').show();
 	$('#user-profil').append(localStorage.getItem('User'));
 }
 
 function hideContent() {
-	$('form').show();
+	$('#log-in').show();
 	$('#page-profil').hide();
 }
 

@@ -3,29 +3,42 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Single Page</title>
+		<link rel="stylesheet" href="assets/style.css">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="assets/script.js"></script>
 	</head>
 	<body>
 		<!-- PAGE LOGIN -->
-		<form>
-			<input type="text" name="pseudo" placeholder="Pseudo">
-			<input type="password" name="password" placeholder="Password">
-			<input type="submit">
-		</form>
-		
-		<!-- PAGE PROFIL -->
-		<div id="page-profil">
-			<nav>
-				<ul id="menu">
-					<li id="home"><a href="assets/accueil.html">Accueil</a></li>
-					<li><a href="assets/profil.html" id="user-profil"></a></li>
-					<li id="log-off"><a href="#">Deconnexion</a></li>
-				</ul>
-			</nav>
-
-			<div class="content-page"></div>
+		<div id="log-in">
+			<img src="assets/images/user.png">
+			<h1>User Anonyme</h1>
+			<form>
+				<input type="text" name="pseudo" placeholder="Pseudo">
+				<div id="password-input">
+					<input type="password" name="password" placeholder="Mot de passe">
+					<button><img src="assets/images/right-arrow.png" alt="arrow"></button>
+				</div>
+			</form>
+			<div id="logo-extern">
+				<img src="assets/images/wifi.png" alt="wifi">
+				<img src="assets/images/settings.png" alt="settings">
+				<img src="assets/images/power-button.png" alt="power">
+			</div>
 		</div>
 
+		<!-- PAGE PROFIL -->
+		<div id="page-profil">
+			<div class="content-page">
+			</div>
+			<div id="bar">
+				<nav>
+					<ul id="menu">
+						<li id="home"><img src="assets/images/windows.png" alt="windows"><a href="assets/accueil.html">ACCUEIL</a></li>
+						<li><a href="assets/profil.html" id="user-profil"></a></li>
+						<li id="log-off"><img src="assets/images/power.png" alt="power"><a href="#">Deconnexion</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</body>
 </html>
