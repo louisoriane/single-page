@@ -1,11 +1,22 @@
-<div id="all">
-	<h3 id="user-name"></h3>
+<div id="profil">
+	<h1>Welcome on Maddle</h1>
 	<p>
-		Vous êtes Administrateur<br><br>
-		<u>Stockage</u><br><br>
-		1% documents<br>
-		4% photos<br>
-		10% musiques<br>
-		1% video
+		Hi guy,<br>
+		The website is not revealed yet.
+		We hope that it'll be soon. We reserve for you a lot of features and surprises.<br>
+		<span>Could you take a quick look over it to check it ?!</span>
 	</p>
+	
+	<div id="form">
+		<input type="text" name="pseudo" placeholder="Change your username" id="change-username">
+		<button id="changeUsername">Do it</button>
+	</form>
 </div>
+
+<script>
+	// Change the user name in local Storage
+	$('#changeUsername').click(function() {
+		localStorage.setItem('User', $('#form').find('input[name="pseudo"]').val());
+		$('#user-profil').text(localStorage.getItem('User'));
+	});
+</script>

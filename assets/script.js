@@ -9,6 +9,7 @@ function isUserConnected() {
 	if (userExist()) {
 		showContent();
 		loadPage();
+		// changeUsername();
 		redirectLogOff();
 	} else {
 		hideContent();
@@ -27,7 +28,7 @@ function userExist() {
 function showContent() {
 	$('#log-in').hide();
 	$('#page-profil').show();
-	$('#user-profil').append(localStorage.getItem('User'));
+	$('#user-profil').text(localStorage.getItem('User'));
 }
 
 function hideContent() {
@@ -53,7 +54,7 @@ function displayContentPage(pageRefInput) {
 			$('.content-page').html(response);
 		},
 		error: function(error) {
-  			console.log('the page was NOT loaded', error);
+  			console.log('The page was not loaded', error);
 		}
 	});
 }
@@ -62,14 +63,13 @@ function displayContentPage(pageRefInput) {
 function redirectLogOff() {
 	$('#log-off').click(function() {
 		localStorage.clear();
-		$('#user-profil').text('');
 		isUserConnected();
 	});
 }
 
 // Form which create the user's account
 function isUserCreatedAccount() {
-	$('form').submit(function(){
+	$('#sign-in').submit(function(){
 		createUser();
 		isUserConnected();
 		return false;
@@ -78,9 +78,8 @@ function isUserCreatedAccount() {
 
 // Create user in local Storage
 function createUser() {
-	localStorage.setItem('User', $('form').find('input[name="pseudo"]').val());
+	localStorage.setItem('User', $('#sign-in').find('input[name="pseudo"]').val());
 }
-
 
 
 
