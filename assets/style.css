@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
 	font-family: 'BebasNeue';
 	src: url('BebasNeue.otf');
 }
@@ -27,10 +27,10 @@ h1 {
 	color: white;
 	font-family: 'BebasNeue';
 	letter-spacing: 2px;
-}
+}*/
 
 /*MENU*/
-form {
+/*form {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
@@ -79,10 +79,10 @@ button img {
 	position: absolute;
 	bottom: 1%;
 	right: 1%;
-}
+}*/
 
 /*USER HOME*/
-#page-profil {
+/*#page-profil {
 	width: 100%;
 	height: 100%;
 	background: url('images/background-user.jpg');
@@ -93,7 +93,6 @@ button img {
 }
 
 #bar {
-	/*background: rgb(33, 33, 33);*/
 	background: black;
 	width: 100%;
 	height: 40px;
@@ -117,7 +116,6 @@ nav {
 
 li {
 	list-style: none;
-	/*background: red;*/
 	width: 130px;
 	display: flex;
 	justify-content: center;
@@ -150,4 +148,4 @@ li:hover {
 	border-radius: 10px;
 	border: 1px solid black;
 	box-shadow: -5px 5px 11px 0px rgba(0,0,0,0.75);
-}
+}*/

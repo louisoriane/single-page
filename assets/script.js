@@ -38,7 +38,7 @@ function hideContent() {
 // Load all the pages without refreshing index url
 function loadPage() {
 	$('a').on('click', function(e){  
-   		e.preventDefault( );
+   		e.preventDefault();
    		var pageRef = $(this).attr('href');
    		displayContentPage(pageRef);
 	});
@@ -51,6 +51,9 @@ function displayContentPage(pageRefInput) {
 		dataType: "text",
 		success: function(response) {
 			$('.content-page').html(response);
+		},
+		error: function(error) {
+  			console.log('the page was NOT loaded', error);
 		}
 	});
 }
@@ -59,6 +62,7 @@ function displayContentPage(pageRefInput) {
 function redirectLogOff() {
 	$('#log-off').click(function() {
 		localStorage.clear();
+		$('#user-profil').text('');
 		isUserConnected();
 	});
 }
