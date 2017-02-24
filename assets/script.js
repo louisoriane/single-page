@@ -9,7 +9,6 @@ function isUserConnected() {
 	if (userExist()) {
 		showContent();
 		loadPage();
-		// changeUsername();
 		redirectLogOff();
 	} else {
 		hideContent();
